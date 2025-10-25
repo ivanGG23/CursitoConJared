@@ -1,0 +1,58 @@
+creación de proyecto de angular
+	ng new <Nombre del proyecto>
+	yes
+	css
+	no	
+	no
+	none <IA  utilizar>
+
+para crear un componente se hace lo siguiente
+	- COMPONENTE:
+	
+	ng g c components/hacer
+
+	- MODULO:
+
+	ng g c modules/lading
+
+	- MODELS
+	
+	ng g i models/album
+	
+	- SERVICES
+
+	ng g s services/album
+
+Una vez que se crearan las carpetas de componentes y módulos, se tiene que configurar las rutas en el archivo de "app.routes.ts"
+	
+	- estando dentro del arreglo, configurar las rutas dentro de los corchetes "[ aquí ]"
+
+	- escribir lo siguientes:
+	{
+           path: '',		
+           redirectTo: '',	dentro de las comillas ira la ruta que se mostrara al principio (pagina principal)
+           pathMatch: 'full'
+ 	},
+
+    	{
+           path: '',
+           component: Lading
+    	}
+
+- Para mostrar un componente se necesita llamar al componente pero desde el modulo para que se visualice en la pagina
+
+- Enrutado: manejo de rutas
+		
+
+
+- Para compilar:
+	ng serve -o
+
+
+
+
+IMPORTANTE
+	- Modificar el archivo de "app.config.ts" para el consumo de APIs (solo se modifica cuando se usan APIs)
+	  IMPORTAR: "import { provideHttpClient } from '@angular/common/http';"
+	- Dentro providers, agregar "provideRouter(routes)"
+	Esto permitirá consumir APIs
